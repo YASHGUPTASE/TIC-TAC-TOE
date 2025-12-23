@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #0a0a0a; 
+    color: white;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    overflow: hidden; /* Prevents scrollbars during game */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 8vmin;
+    margin-bottom: 2rem;
+    letter-spacing: 5px;
+}
+
+/* Header Neon Spans */
+h1 .neon-x {
+    color: #ff0055;
+    text-shadow: 0 0 10px #ff0055, 0 0 20px #ff0055;
+}
+
+h1 .neon-o {
+    color: #00d4ff;
+    text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+}
+
+.page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2vmin;
+}
+
+.cube {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: 2px solid #333;
+    background-color: #1a1a1a;
+    font-size: 10vmin;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.cube:hover {
+    border-color: #666;
+    background-color: #252525;
+}
+
+/* Dynamic Neon Classes for JS */
+.neon-x {
+    color: #ff0055;
+    text-shadow: 0 0 5px #ff0055, 0 0 15px #ff0055, 0 0 30px #ff0055;
+}
+
+.neon-o {
+    color: #00d4ff;
+    text-shadow: 0 0 5px #00d4ff, 0 0 15px #00d4ff, 0 0 30px #00d4ff;
+}
+
+#reset-btn {
+    margin-top: 3rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 2rem;
+    border: 2px solid #083D77;
+    background: transparent;
+    color: #00d4ff;
+    cursor: pointer;
+    transition: 0.3s;
+    text-shadow: 0 0 5px #00d4ff;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+}
+
+#reset-btn:hover {
+    background: #083D77;
+    color: white;
+    box-shadow: 0 0 20px #083D77;
+}
+
+/* Winner Overlay */
+.msg-box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+#msg {
+    font-size: 10vmin;
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 20px #ff0055;
+}
+
+#new-btn {
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    background: #ff0055;
+    color: white;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: 0 0 20px #ff0055;
+}
+
+.hide {
+    display: none;
+}
